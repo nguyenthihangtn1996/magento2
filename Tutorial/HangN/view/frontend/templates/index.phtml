@@ -1,0 +1,37 @@
+<style>
+table {  font-family: arial, sans-serif;  border-collapse: collapse;  width: 100%;  margin-top: 30px;}
+td, th {  border: 1px solid #dddddd;  text-align: left;  padding: 8px;  }
+tr:nth-child(even) { background-color: #dddddd; }
+.post-id{width:2%} .post-name{width:30%}
+.faq_image{
+  height:80px;
+  width:120px;
+}
+</style>
+<table>
+  <tr>
+    <th class="post-id">Id</th>
+    <th class="post-name">Title</th>
+    <th>Image</th>
+    <th>Description</th>
+   
+  </tr>
+    <?php
+        foreach ($block->getFaqCollection() as $key=>$faq){
+          echo '<tr>
+              <td>'.$faq->getFaqId().'</td>
+              <td>'.$faq->getTitle().'</td>
+              <td ><img class="faq_image" src="'.$faq->getImage().'"></td>
+              <td>'.substr($faq->getDescription(), 0, 255).'</td>
+            </tr>';
+                
+        }
+
+
+
+    ?>
+
+</table>
+<?php if ($block->getPagerHtml()): ?>
+    <div style="margin-top:10px" class="order-products-toolbar toolbar bottom custom-pager"><?php echo $block->getPagerHtml(); ?></div>
+    <?php endif ?>

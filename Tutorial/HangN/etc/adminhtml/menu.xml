@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Tutorial_HangN::tutorialmagento2" title="Faqs" module="Tutorial_HangN" sortOrder="51" resource="Tutorial_HangN::tutorialmagento2"/>
+        <add id="Tutorial_HangN::faq" title="Manage Faqs" module="Tutorial_HangN" sortOrder="10" action="tutorial_hangn/faq" resource="Tutorial_HangN::faq" parent="Tutorial_HangN::tutorialmagento2"/>
+    </menu>
+</config>
